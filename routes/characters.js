@@ -7,7 +7,7 @@ router.get("/characters", async (req, res) => {
 
   try {
     const response = await axios.get(
-      `https://lereacteur-marvel-api.herokuapp.com/characters?apiKey=${process.env.API_KEY}&name=${name}&limit=${limit}&skip=${skip}`
+      `https://fred-marvel-backend.herokuapp.com/characters?apiKey=${process.env.API_KEY}&name=${name}&limit=${limit}&skip=${skip}`
     );
     res.status(200).json(response.data);
   } catch (error) {
